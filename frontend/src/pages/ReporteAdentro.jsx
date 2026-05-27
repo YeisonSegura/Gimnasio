@@ -27,10 +27,10 @@ export default function ReporteAdentro() {
 
   return (
     <div>
-      <div className="page-header">
+      <div className="page-header" style={{background:'#f7f8fa',borderRadius:'10px',padding:'22px 28px 18px',marginBottom:'28px',boxShadow:'0 1px 8px rgba(0,0,0,.04)'}}>
         <div>
-          <h1>🟢 Clientes en el Gimnasio</h1>
-          <p>Tiempo real — última actualización: {ultima} — refresca automáticamente cada 30s (RF06)</p>
+          <h1 style={{fontSize:'2rem',fontWeight:800,marginBottom:4,letterSpacing:'-1px'}}>🟢 Clientes en el Gimnasio</h1>
+          <p style={{fontSize:'1.08rem',color:'var(--muted)',fontWeight:500}}>Tiempo real — última actualización: {ultima} — refresca automáticamente cada 30s</p>
         </div>
         <div style={{display:'flex',gap:10,alignItems:'center'}}>
           <span className="badge badge-green" style={{fontSize:'.95rem',padding:'7px 14px'}}>{adentro.length} dentro</span>

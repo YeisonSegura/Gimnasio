@@ -49,8 +49,11 @@ export default function Pagos() {
 
   return (
     <div>
-      <div className="page-header">
-        <div><h1>Registro de Pagos</h1><p>Ingreso de pagos por periodo (RF02)</p></div>
+      <div className="page-header" style={{background:'#f7f8fa',borderRadius:'10px',padding:'22px 28px 18px',marginBottom:'28px',boxShadow:'0 1px 8px rgba(0,0,0,.04)'}}>
+        <div>
+          <h1 style={{fontSize:'2rem',fontWeight:800,marginBottom:4,letterSpacing:'-1px'}}>Registro de Pagos</h1>
+          <p style={{fontSize:'1.08rem',color:'var(--muted)',fontWeight:500}}>Ingreso de pagos por periodo</p>
+        </div>
       </div>
 
       <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:22}}>

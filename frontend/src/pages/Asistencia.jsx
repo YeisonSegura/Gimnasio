@@ -46,12 +46,12 @@ export default function Asistencia() {
 
   return (
     <div>
-      <div className="page-header">
+      <div className="page-header" style={{background:'#f7f8fa',borderRadius:'10px',padding:'22px 28px 18px',marginBottom:'28px',boxShadow:'0 1px 8px rgba(0,0,0,.04)'}}>
         <div>
-          <h1>Ingresos y Salidas</h1>
-          <p>Control de acceso al gimnasio — descuenta 1 día por ingreso (RF03 / RF04)</p>
+          <h1 style={{fontSize:'2rem',fontWeight:800,marginBottom:4,letterSpacing:'-1px'}}>Ingresos y Salidas</h1>
+          <p style={{fontSize:'1.08rem',color:'var(--muted)',fontWeight:500}}>Control de acceso al gimnasio — descuenta 1 día por ingreso</p>
         </div>
-        <span className="badge badge-green" style={{fontSize:'.95rem',padding:'7px 14px'}}>
+        <span className="badge badge-green" style={{fontSize:'.95rem',padding:'7px 14px',alignSelf:'center'}}>
           🟢 {adentro.length} dentro ahora
         </span>
       </div>
