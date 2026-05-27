@@ -141,9 +141,17 @@ input:focus,select:focus { outline:none; border-color:var(--accent); box-shadow:
 .dias-none { color:var(--danger);  font-weight:700; }
 
 /* ── Welcome banner ── */
-.welcome-banner { background:linear-gradient(135deg,#111827,#1d4ed8); color:#fff; border-radius:var(--radius); padding:24px 28px; margin-bottom:24px; }
-.welcome-banner h2 { font-size:1.3rem; margin-bottom:5px; }
-.welcome-banner p  { opacity:.75; font-size:.88rem; }
+.welcome-banner {
+  background:linear-gradient(180deg,#ffffff,#e8f0ff);
+  color:#1f2937;
+  border-radius:16px;
+  padding:24px 28px;
+  margin-bottom:24px;
+  border:1px solid rgba(37,99,235,.14);
+  box-shadow:0 10px 24px rgba(37,99,235,.12);
+}
+.welcome-banner h2 { font-size:1.45rem; margin-bottom:6px; color:#111827; }
+.welcome-banner p  { opacity:.72; font-size:.92rem; color:#4b5563; }
 
 /* ── Tarifa cards ── */
 .tarifa-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:16px; }
