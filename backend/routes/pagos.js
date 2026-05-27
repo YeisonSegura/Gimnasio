@@ -30,7 +30,15 @@ router.post('/', async (req, res) => {
   dias_pagados = parseInt(dias_pagados);
   if (!cliente_id || !dias_pagados || dias_pagados < 1 || dias_pagados > 365)
     return res.status(400).json({ error: 'cliente_id y dias_pagados (1-365) son obligatorios' });
-  const valorFinal = valor ? parseFloat(valor) : calcularValor(dias_pagados);
+
+  const valorEsperado = calcularValor(dias_pagados);
+  const valorRecibido = valor === undefined || valor === null ? valorEsperado : Number(valor);
+  if (Number.isNaN(valorRecibido))
+    return res.status(400).json({ error: 'El valor del pago debe ser numérico' });
+  if (Math.abs(valorRecibido - valorEsperado) > 0.01)
+    return res.status(400).json({ error: `Valor inválido para ${dias_pagados} días. Debe ser ${new Intl.NumberFormat('es-CO',{style:'currency',currency:'COP',maximumFractionDigits:0}).format(valorEsperado)}` });
+
+  const valorFinal = valorEsperado;
   const fecha = fecha_pago || new Date().toISOString().split('T')[0];
   try {
     const [cli] = await pool.query('SELECT id FROM clientes WHERE id=?', [cliente_id]);
