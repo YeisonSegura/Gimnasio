@@ -59,9 +59,13 @@ export default function Clientes() {
 
   return (
     <div>
-      <div className="page-header">
-        <div><h1>Gestión de Clientes</h1><p>Registro, modificación y eliminación de clientes (RF01)</p></div>
-        <button className="btn btn-primary" onClick={abrirCrear}>+ Nuevo cliente</button>
+
+      <div className="page-header" style={{background:'#f7f8fa',borderRadius:'10px',padding:'22px 28px 18px',marginBottom:'28px',boxShadow:'0 1px 8px rgba(0,0,0,.04)'}}>
+        <div>
+          <h1 style={{fontSize:'2rem',fontWeight:800,marginBottom:4,letterSpacing:'-1px'}}>Gestión de Clientes</h1>
+          <p style={{fontSize:'1.08rem',color:'var(--muted)',fontWeight:500}}>Registro, modificación y eliminación de clientes</p>
+        </div>
+        <button className="btn btn-primary" style={{height:40,alignSelf:'center'}} onClick={abrirCrear}>+ Nuevo cliente</button>
       </div>
 
       <div className="card">
