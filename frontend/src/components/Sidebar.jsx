@@ -13,6 +13,7 @@ export default function Sidebar() {
           { to:'/clientes',           icon:'👥', label:'Clientes' },
           { to:'/pagos',              icon:'💳', label:'Pagos' },
           { to:'/asistencia',         icon:'🚪', label:'Ingresos / Salidas' },
+          { to:'/historial',          icon:'📅', label:'Historial' },
           { to:'/reporte-general',    icon:'📋', label:'Reporte General' },
           { to:'/reporte-adentro',    icon:'🟢', label:'En el Gimnasio' },
         ].map(({ to, icon, label }) => (
